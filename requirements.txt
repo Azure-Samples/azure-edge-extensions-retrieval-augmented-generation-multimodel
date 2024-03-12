@@ -1,0 +1,7 @@
+streamlit
+streamlit-authenticator
+streamlit-extras
+st-pages
+pandas
+llama-cpp-python
+marqo
