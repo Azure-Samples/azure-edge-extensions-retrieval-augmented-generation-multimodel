@@ -42,7 +42,7 @@ currently we use [Marqo](https://www.marqo.ai/) as the multi-modal vector search
 
 ### Installation
 
-- Install docker on linux machine with the guide [here](https://docs.docker.com/desktop/install/ubuntu/)
+- Install docker engine on linux machine with the guide [here](https://docs.docker.com/engine/install/ubuntu/)
 - Install packages
 
 ```bash
