@@ -52,8 +52,7 @@ sudo apt-get install make
 sudo apt-get install g++
 ```
 
-- Install packages
-
+- Create virtual environment. Make sure [Anaconda](https://phoenixnap.com/kb/install-anaconda-ubuntu) is installed first.
 ```bash
 conda create -n llava python=3.10 -y
 conda activate llava
