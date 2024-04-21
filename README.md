@@ -73,7 +73,7 @@ pip install -r requirements.txt
 
     ```bash
     git clone https://github.com/ggerganov/llama.cpp
-    cd llama.cpp
+    cd llama.cpp/examples/llava
     make llava-cli
     ```
 
