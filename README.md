@@ -43,6 +43,15 @@ currently we use [Marqo](https://www.marqo.ai/) as the multi-modal vector search
 ### Installation
 
 - Install docker engine on linux machine with the guide [here](https://docs.docker.com/engine/install/ubuntu/)
+  
+- Install make and g++ for llava execution file c++ compilation
+
+```bash
+sudo apt-get update
+sudo apt-get install make
+sudo apt-get install g++
+```
+
 - Install packages
 
 ```bash
