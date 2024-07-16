@@ -1,4 +1,4 @@
-# Edge Multi-Model RAG Tool for Machine Troubleshooting
+# Edge Multi-Modal RAG Tool for Machine Troubleshooting
 
 Multimodal RAG on Edge is a tool to perform multi-modal searches, which allows image, text, or combination of both as the input query, within files using a multi-modal vector search engine [Marqo](https://www.marqo.ai/#:~:text=Marqo%20helps%20you%20configure%20deep,images%20into%20a%20single%20vector.), and to generate a readable response based on the search result with [LLAVA (Microsoft' partnership Large Multimodal Model)](https://www.microsoft.com/en-us/research/project/llava-large-language-and-vision-assistant/).
 
