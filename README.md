@@ -62,14 +62,7 @@ pip install -r requirements.txt
 
 ### Quick Start
 
-1. Download the repo to your local dev machine
-
-    ```bash
-    git clone <repo url>
-    cd Multimodel-RAG-for-Machine-Troubleshooting
-    ```
-
-2. Use docker to run Marqo server on your local dev machine
+1. Pull the docker and run Marqo server on your local dev machine
 
     ```bash
     docker rm -f marqo
@@ -77,7 +70,7 @@ pip install -r requirements.txt
     docker run --name marqo -it -p 8882:8882 marqoai/marqo:latest
     ```
 
-3. Download github repo [LLAVA](https://github.com/ggerganov/llama.cpp/tree/master/examples/llava) and follow the instructions to compile LLAVA executable llava-cli to the local path ./llava
+2. Download github repo [LLAVA](https://github.com/ggerganov/llama.cpp/tree/master/examples/llava) and follow the instructions to compile LLAVA executable llava-cli to the local path ./llava
 
     ```bash
     git clone https://github.com/ggerganov/llama.cpp
@@ -85,20 +78,22 @@ pip install -r requirements.txt
     make llava-cli
     ```
 
-4. Download llava model from [here](https://huggingface.co/mys/ggml_llava-v1.5-7b/tree/main) into your local path ./llama.cpp/models.
+3. Download llava model from [here](https://huggingface.co/mys/ggml_llava-v1.5-7b/tree/main) into your local path ./llama.cpp/models.
     You need to download the two model files:
     - mmproj-model-f16.gguf
     - ggml-model-q4_k.gguf
 
-5. Run the following command
+4. Download this repo to your local dev machine and run the following command
 
     ```bash
+    git clone <repo url>
+    cd azure-edge-extensions-retrieval-augmented-generation-multimodel/src
     streamlit run page_edge_multimodal_rag.py
     ```
 
     The browser will auto open the web UI page. If not, please open the browser and input the url http://localhost:8501.
 
-6. Create an Azure Blob Storage account and upload your multimodal documents to the blob storage. Follow the instructions [here](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python#upload-blobs-to-a-container).
+5. Create an Azure Blob Storage account and upload your multimodal documents to the blob storage. Follow the instructions [here](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python#upload-blobs-to-a-container).
     
     For demo purpose, use ./data/demo_dataset.csv as the document to upload. The dataset contains machine troubleshooting guidance and image urls.
 
@@ -111,7 +106,7 @@ pip install -r requirements.txt
     blob_name = ""
     local_file_path = "" # your local file path for the downloaded multimodal file
 
-7. Use the web UI to perform the following operations:
+6. Use the web UI to perform the following operations:
     - page-create-index: Input a new index name and create a new index in the multi-modal vector database.
     - page-delete-index: Select an index name and delete it from the multi-modal vector database.
     - page-upload-data: The demo code will automatically download the dataset from Azure Blob Storage. The dataset contains image and text contents to be embedding into the multi-modal vector database.
