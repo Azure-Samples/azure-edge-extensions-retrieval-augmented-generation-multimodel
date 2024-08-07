@@ -92,7 +92,7 @@ pip install --upgrade pip
     streamlit run page_edge_multimodal_rag.py
     ```
 
-    The browser will auto open the web UI page. If not, please open the browser and input the url http://localhost:8501. Optionally to browse from your local developer machine you can use [`port-forwarding`](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/#forward-a-local-port-to-a-port-on-the-pod).
+    The browser will auto open the web UI page. If not, please open the browser and input the url http://localhost:8501. 
 
 5. Create an Azure Blob Storage account and upload your multimodal documents to the blob storage. Follow the instructions [here](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python#upload-blobs-to-a-container).
     
