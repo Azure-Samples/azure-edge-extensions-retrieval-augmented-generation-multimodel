@@ -57,7 +57,6 @@ sudo apt-get install g++
 conda create -n llava python=3.10 -y
 conda activate llava
 pip install --upgrade pip 
-pip install -r requirements.txt
 ```
 
 ### Quick Start
@@ -87,7 +86,9 @@ pip install -r requirements.txt
 
     ```bash
     git clone <repo url>
-    cd azure-edge-extensions-retrieval-augmented-generation-multimodel/src
+    cd azure-edge-extensions-retrieval-augmented-generation-multimodel/
+    pip install -r requirements.txt
+    cd src/
     streamlit run page_edge_multimodal_rag.py
     ```
 
