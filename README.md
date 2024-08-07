@@ -85,7 +85,7 @@ pip install -r requirements.txt
     make llava-cli
     ```
 
-4. Download llava model from [here](https://huggingface.co/mys/ggml_llava-v1.5-7b/tree/main) into your local path ./llava/models.
+4. Download llava model from [here](https://huggingface.co/mys/ggml_llava-v1.5-7b/tree/main) into your local path ./llama.cpp/models.
     You need to download the two model files:
     - mmproj-model-f16.gguf
     - ggml-model-q4_k.gguf
