@@ -82,19 +82,30 @@ pip install --upgrade pip
     - mmproj-model-f16.gguf
     - ggml-model-q4_k.gguf
 
-4. Download this repo to your local dev machine and run the following command
+4. Download this repo to your local dev machine, 
 
     ```bash
     git clone <repo url>
     cd azure-edge-extensions-retrieval-augmented-generation-multimodel/
     pip install -r requirements.txt
+    ```
+
+5. Config the below parameters with your LlaVa model path in page_search_and_generate.py
+
+    LLAVA_EXEC_PATH = "../llava/llava-cli "
+    MODEL_PATH = "../llava/models/ggml-model-q4_k.gguf"
+    MMPROJ_PATH = "../llava/models/mmproj-model-f16.gguf"
+
+6. Run the webUI server
+
+    ```bash
     cd src/
     streamlit run page_edge_multimodal_rag.py
     ```
 
     The browser will auto open the web UI page. If not, please open the browser and input the url http://localhost:8501. 
 
-5. Create an Azure Blob Storage account and upload your multimodal documents to the blob storage. Follow the instructions [here](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python#upload-blobs-to-a-container).
+7. Create an Azure Blob Storage account and upload your multimodal documents to the blob storage. Follow the instructions [here](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python#upload-blobs-to-a-container).
     
     For demo purpose, use ./data/demo_dataset.csv as the document to upload. The dataset contains machine troubleshooting guidance and image urls.
 
@@ -107,7 +118,7 @@ pip install --upgrade pip
     blob_name = ""
     local_file_path = "" # your local file path for the downloaded multimodal file
 
-6. Use the web UI to perform the following operations:
+8. Use the web UI to perform the following operations:
     - page-create-index: Input a new index name and create a new index in the multi-modal vector database.
     - page-delete-index: Select an index name and delete it from the multi-modal vector database.
     - page-upload-data: The demo code will automatically download the dataset from Azure Blob Storage. The dataset contains image and text contents to be embedding into the multi-modal vector database.
