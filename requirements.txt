@@ -3,5 +3,5 @@ streamlit-authenticator == 0.2.3
 streamlit-extras == 0.3.6
 st-pages == 0.3.1
 pandas
-llama-cpp-python == 0.2.32
+llama-cpp-python == 0.2.72
 marqo
